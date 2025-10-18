@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap" />
+    <title>Playground</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.svg">
+</head>
+<body>
+
+     <div class="navi">
+                    <div class="play">
+                        <a href="play.html">✦ playground ✦</a>
+                    </div>
+                    <div class="home">
+                        <a href="index.html">melina äikää</a>
+                    </div>
+                    <div class="about">
+                        <a href="about.html">✦ about ✦</a>
+                    </div>
+                </div>
+    <div class="main">
+        <div class="grid">
+            <div class="side">
+                <div class="intro"> 
+                    <h1>Playground</h1>
+                    <p>Collection of other creative work, mostly personal projects made for fun. <br><br>
+    Click images to learn more</p>
+                </div>
+                <div class="info">  
+                    <div class="hidden-info" style="display: none;">
+                        <div id="info1" class="info-block">
+                            <h3>y</h3>
+                            <p>y</p>
+                        </div>
+
+                        <div id="info2" class="info-block">
+                            <h3>Superposition</h3>
+                            <p>“Superposition is a property of quantum mechanics that allows a system to be in several different states at once.”<br><br>Collection of five audiovisual pieces: digital and analog mediums brought together with film photography, cutting images by hand and combining them to video and sound.</p>
+                            <img src="IMG_6889.JPG" style="max-width: 90%; margin-top: 10px; ">
+                            <img src="FINALtsygä.gif" style="max-width: 90%; margin-top: 10px; ">
+                        </div>
+
+                        <div id="info3" class="info-block">
+                            <h3>x</h3>
+                            <p>x</p> 
+                        </div>
+
+                        <div id="info4" class="info-block">
+                            <h3>Calendar posters</h3>
+                            <p>Monthly calendars to work as a piece of interior design, making it easy to have a new look every month.<br><br>Project made with Figma.</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="gallery"> 
+                <img src="FINALtalo.gif" data-info="info2">
+                <img src="FINfanni_1.gif" data-info="info2">
+                <img src="calendar.png" data-info="info4">
+            </div>
+        
+</div>
+    </div>
+    <div class="footer">
+        <div class="contacts">
+            <div>
+                <a href="cv_melina_aikaa_en.pdf" target="_blank">resume</a>
+                <span class="accent external link">↗︎</span>
+            </div>
+            <div>
+                <a href="mailto: melina.aikaa@gmail.com">email</a>
+                <span class="accent external link">↗︎</span>
+            </div>
+            <div>
+            <a href="https://www.linkedin.com/in/melinaaikaa" target="_blank">linkedin</a>
+            <span class="accent external link">↗︎</span>
+            </div>
+        </div>
+        <hr>
+        <div class="credits">
+            site designed & coded by me
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryImages = document.querySelectorAll(".gallery img[data-info]");
+        const hiddenInfo = document.querySelector(".hidden-info");
+        const infoBlocks = document.querySelectorAll(".info-block");
+
+        let activeInfoId = null;
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", function () {
+                const infoId = this.getAttribute("data-info");
+                const targetInfo = document.getElementById(infoId);
+
+                if (activeInfoId === infoId) {
+                    targetInfo.style.display = "none";
+                    hiddenInfo.style.display = "none";
+                    activeInfoId = null;
+                } else {
+                    hiddenInfo.style.display = "block";
+
+                    infoBlocks.forEach(block => block.style.display = "none");
+
+                    targetInfo.style.display = "block";
+
+                    activeInfoId = infoId;
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

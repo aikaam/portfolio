@@ -1,0 +1,292 @@
+/* NAVI */
+
+.navi {
+    font-family: Syne, serif;
+    font-size: 24px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(250, 249, 246, 0.61);
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    color: #212427;
+}
+
+.home {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.play a, .home a, .about a {
+    text-decoration: none;
+    color: #212427;
+    transition: color 300ms linear;
+}
+.play a:hover, .home a:hover, .about a:hover {
+    cursor: pointer;
+    color: #396738;
+}
+
+/* TEKSTIT */
+
+h2 {
+    font-family: Syne;
+    font-size: 32px;
+    font-weight: 500;
+    color: #212427;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+
+
+h5 {
+    font-family: Syne;
+    font-size: 32px;
+    font-weight: 400;
+    color: #396738;
+    margin-bottom: 0;
+}
+
+h6 {
+    font-family: Epilogue;
+    font-size: 16px;
+    font-weight: 400;
+    color: #396738;
+    margin: 2% 0;
+    line-height: 1.6;
+}
+
+p {
+    font-family: Epilogue;
+    font-size: 16px;
+    font-weight: 400;
+    color: #212427;
+    margin-bottom: 2%;
+    line-height: 1.6;
+}
+
+/* MAIN */
+
+body { 
+    padding: 0;
+    margin: 0; 
+    background-color: #FAF9F6;
+}
+
+.main {
+    margin: 3% 14%;
+}
+
+.projectwip {
+    text-align: center;
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+}
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.finalpics {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.finalpics img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+.summary {
+    margin-bottom: 2%;
+}
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.process {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    column-gap: 2rem;
+    align-items: start;
+    margin-bottom: 4%;
+}
+
+.process p {
+    grid-column: 2;
+    margin: 1rem 0;
+}
+
+.processimg {
+    grid-column: 1 / -1;
+    width: 60vw;
+    margin: 1% auto;
+}
+.process-full-img {
+    grid-column: 1 / -1;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.process-full-img img {
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+.overview, .challenge, .process, .outcome, .reflection, .feedback {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    column-gap: 2rem; 
+    align-items: start;
+    margin-bottom: 4%
+}
+
+.overview h6,
+.challenge h6,
+.process h6,
+.outcome h6 
+.reflection h6,
+.feedback h6 {
+    margin: 2% 0;
+}
+
+.overview p,
+.challenge p,
+.process p,
+.outcome p 
+.reflection p,
+.feedback p {
+    margin: 2% 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #396738;
+
+}
+
+.finalpics {
+    display: flex;
+    flex-direction: row;
+    max-width: 70%;
+    gap: 2%;
+    margin-bottom: 0;
+}
+.finalpics2 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 2%;
+    margin: 0 auto;
+
+}
+.nextproj {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4%;
+}
+.button a {
+    font-family: Syne;
+    font-size: 16px;
+    color: #396738;
+    text-decoration: none;
+    border: 2px solid #396738;
+    padding: 0.5rem 2rem;
+    border-radius: 1px;
+    transition: background-color 300ms linear, color 300ms linear;
+}
+.button a:hover {
+    background-color: #396738;
+    color: #FAF9F6;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Epilogue;
+    width: 100%;
+    height: 313px;
+    background-color: #75AE6F;
+    padding: 0 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 24px;
+    padding-bottom: 1rem;
+}
+
+.contacts a {
+    color: #212427;
+    text-decoration: none;
+    padding-left: 1.5rem;
+}
+.external-link {
+    font-size: inherit;
+    vertical-align: baseline;
+}
+.accent {
+    color:#212427
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color: #212427;
+  height: 1px;
+}
+
+.credits {
+    font-family: Epilogue;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 1.25;
+}
