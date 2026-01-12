@@ -17,6 +17,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     color: #212427;
+    z-index: 999999;
 }
 
 .home {
@@ -33,6 +34,19 @@
 .play a:hover, .home a:hover, .about a:hover {
     cursor: pointer;
     color: #396738;
+}
+.mobile-navi {
+    display: none;
+}   
+.nav-name {
+    display: none;
+    position: fixed;
+    font-family: Syne, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #212427;
+    margin-left: 1rem;
+    width: 100%;;
 }
 
 /* TEKSTIT */
@@ -135,6 +149,7 @@ img {
     justify-content: space-between;
     margin-bottom: 4%;
 }
+
 .process {
     display: grid;
     grid-template-columns: 35% 1fr;
@@ -150,8 +165,16 @@ img {
 
 .processimg {
     grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
     width: 60vw;
     margin: 1% auto;
+}
+.processimg img {
+    width: 100%;
+    max-width: 60vw;
+    height: auto;
+    display: block;
 }
 .process-full-img {
     grid-column: 1 / -1;
@@ -168,11 +191,11 @@ img {
 }
 
 .overview, .challenge, .process, .outcome, .reflection, .feedback {
-    display: grid;
-    grid-template-columns: 35% 1fr;
-    column-gap: 2rem; 
-    align-items: start;
-    margin-bottom: 4%
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  column-gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
 }
 
 .overview h6,
@@ -289,4 +312,166 @@ hr {
     font-weight: 400;
     margin: 10px 0;
     line-height: 1.25;
+}
+
+
+
+
+/* SKAALAUTUVUUS */
+@media (max-width: 992px) {
+  .main {
+    margin: 5%;
+  }
+
+  .overview, .challenge, .process, .outcome, .reflection, .feedback {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .processimg img, .process-full-img img {
+    width: 90%;
+  }
+
+  .infos {
+    align-items: flex-start;
+  }
+  .finalpics, .finalpics2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .finalpics img, .finalpics2 img {
+    max-width: 100%;
+    width: 900px;
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+.infos {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .finalpics, .finalpics2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .finalpics img, .finalpics2 img {
+    max-width: 100%;
+    width: 500px;
+    margin-bottom: 2%;
+  }
+
+ .credits {
+    font-size: 14px;
+  }
+
+  .contacts {
+    justify-content: flex-end;
+    font-size: 18px;
+  }
+
+  .button a {
+    display: block;
+    text-align: center;
+    width: 65%;
+  }
+}
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #212427;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(12px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-12px);
+}
+
+.hamburger {
+    position: fixed;
+    right: 5%;
+    top: 3%;
+    transform: translateY(-50%);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FAF9F6;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 2rem;
+    transition: right 0.35s ease;
+}
+
+.mobile-menu a {
+    color: #212427;
+    text-decoration: none;
+    font-family: Syne, serif;
+    font-size: 28px;
+    padding-left: 12%;
+}
+
+@media (max-width: 900px) {
+    .navi {
+        z-index: 99;
+    }
+    .nav-name {
+        display: block;
+    }
+    .play, .home, .about {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .mobile-menu.open {
+        right: 0;
+    }
 }
