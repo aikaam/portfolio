@@ -11,6 +11,7 @@
 </head>
 <body>
      <div class="navi">
+                    <div class="nav-name">melina äikää</div>
                     <div class="play">
                         <a href="play.html">✦ playground ✦</a>
                     </div>
@@ -19,8 +20,19 @@
                     </div>
                     <div class="about">
                         <a href="about.html">✦ about ✦</a>
+                    </div>      
+            </div>
+            <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </div>
+                    <div class="mobile-menu" id="mobileMenu">
+                        <a href="index.html">home</a>
+                        <a href="play.html">playground</a>
+                        <a href="about.html">about</a>
                     </div>
-                </div>
+        </div>
     <div class="main">
         <div class="project">
             <h5>Oranssi ry</h5>
@@ -83,6 +95,10 @@
                     <h6>Reflection</h6>
                     <p>I gained a lot of confidence as a designer during this project. My first time (and hopefully not the last) working as a team lead, which I enjoyed a lot. Got good feedback from my team mates for my ability to organise and coordinate everything.</p>
                 </div>
+                <div class="feedback">
+                    <h6>Feedback</h6>
+                    <p>"The collaboration went smoothly. Communication was fast and efficient. They were open and receptive to our wishes and feedback. They understood Oranssi's concept perfectly, and we felt clearly heard. The website turned out clean, clear, and fresh. The end result met our expectations, if not exceeded them."</p>
+                </div>
         </div>
         <div class="nextproj">
             <div class="button">
@@ -94,7 +110,7 @@
     <div class="footer">
         <div class="contacts">
             <div>
-                <a href="cv_melina_aikaa_en.pdf" target="_blank">resume</a>
+                <a href="cv_melina_aikaa_eng.pdf" target="_blank">resume</a>
                 <span class="accent external link">↗︎</span>
             </div>
             <div>
@@ -111,5 +127,15 @@
             site designed & coded by me
         </div>
     </div>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+});
+</script>
 </body>
 </html>
