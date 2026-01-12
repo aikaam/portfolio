@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="proj.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400&display=swap" />
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&display=swap" />
-    <title>joo</title>
+    <title>Communication strategy</title>
     <link rel="icon" type="image/x-icon" href="favicon2.svg">
 </head>
 <body>
      <div class="navi">
+                    <div class="nav-name">melina äikää</div>
                     <div class="play">
                         <a href="play.html">✦ playground ✦</a>
                     </div>
@@ -19,24 +20,99 @@
                     </div>
                     <div class="about">
                         <a href="about.html">✦ about ✦</a>
+                    </div>      
+            </div>
+            <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+            </div>
+                    <div class="mobile-menu" id="mobileMenu">
+                        <a href="index.html">home</a>
+                        <a href="play.html">playground</a>
+                        <a href="about.html">about</a>
                     </div>
-                </div>
-    <div class="main">
-        <div class="projectwip">
-            <h2>Still under construction!</h2>
-            <h6>Project coming soon.</h6>
         </div>
+    <div class="main">
+        <div class="project">
+            <h5>Lilinkotisäätiö</h5>
+            <h2>Communication strategy and guide for social media</h2>
+            <img class="hero" src="lilihead.png">
+                <div class="summary">
+                    <h6>Summary</h6>
+                    <p>Lilinkotisäätiö is a non-profit organization that offers social and health care housing services. In addition to housing services they provide open and recovery oriented activities for individuals recovering from mental health and substance abuse challenges.</p>
+                </div>
+                    <div class="infos">
+                        <div class="role">
+                            <h6>Role</h6>
+                            <p>Service Designer</p>
+                        </div>
+                        <div class="timeline">
+                            <h6>Timeline</h6>
+                            <p>6 weeks</p>
+                        </div>
+                        <div class="tools">
+                            <h6>Tools</h6>
+                            <p>Figma<br>Illustrator<br>Canva</p>
+                        </div>
+                    </div>
+                <div class="overview">
+                    <h6>Overview</h6>
+                    <p>The client wanted a new communication strategy for the next three years. The end-product should be an improved and updated version of the old strategy with new goals for the organization. They also asked help for their two social media channels, which are about to be combined into one.</p>
+                </div>
+                <div class="challenge">
+                    <h6>The Challenge</h6>
+                    <p>How might we create a communication strategy that is easily accessible and efficient to implement for all employees inside the organization?</p>
+                </div>
+                <div class="process">
+                    <h6>The Process</h6>
+                    <p>We began the project with reaserching and benchmarking other communication strategies and looking further into Lilinkotisäätiö's values and work. We audited their old communication strategy and social media platforms by doing SWOT-analysis and journey maps to get a good overall picture of the current situation.<br><br>Our team planned and facilitated a workshop for Lilinkotisäätiö's employees to map out their current values and goals better.</p>
+                    <div class="process-full-img">
+                            <img src="lili workshop.png">
+                    </div>
+                    <p>With the results of the workshop, our team started working on the new communication strategy. We also wanted to give it a more fresher look and make it easier to read. As the old version was a word document, we switched over to a slideshow, making simple and clear slides to follow.</p>
+                    <div class="processimg">
+                            <img src="lili start.png">
+                    </div>
+                    <p>After getting the communication stretegy together, we began to plan how to combine the two social media accounts, and how to make the feed more simple, but interesting. We designed different post templates with the brand colors and logos as well as made new versions for the open activities' weekly program posts. With the templates, we prepared a guide to make sure they're used correctly and the posted materials will be accessible.</p>
+                </div>
+                <div class="outcome">
+                    <h6>The Outcome</h6>
+                    <p>In the end, we created Lilinkotisäätiö a new communication strategy for the years 2026-2028. In addition, we designed a communication and social media checklist for them to use. The checklist is a compact and fast way to make sure everything you're about to publish aligns with the organization's values.<br><br>For the social media, we created a guide for more efficient and accessible posting and created new, clearer templates for their open activities schedules and other posting.</p>
+                <div class="process-full-img">
+                        <img src="lili.png">
+                </div>
+                <div class="process-full-img">
+                        <img src="lilinkotichecklist.png">
+                </div>
+                <div class="process-full-img">
+                        <img src="lili some.png">
+                </div>
+                </div>
+               
+                <div class="reflection">
+                    <h6>Reflection</h6>
+                    <p>This project was a first time for all of our team working on a communication strategy, so we had to do a lot of research to be able to create a successful outcome. Facilitating the workshop with the employees was a great way to get more insights into the organization and we could execute the project in a short period of time.<br><br>Overall, both our team and the client were very happy with the outcome and the improvements we made. Even though doing a communication strategy was something new for us, we learned a lot and were able to incorporate our expertise on the project.</p>
+                </div>
+
+                <!-- <div class="feedback">
+                    <h6>Feedback</h6>
+                    <p></p>
+                </div> -->
+
+        </div>
+
         <div class="nextproj">
             <div class="button">
-                <a href="proj2.html">Next project →</a>
+                <a href="proj4.html">Next project →</a>
             </div>
         </div>
-    </div>
+    </div> 
 
     <div class="footer">
         <div class="contacts">
             <div>
-                <a href="cv_melina_aikaa_en.pdf" target="_blank">resume</a>
+                <a href="cv_melina_aikaa_eng.pdf" target="_blank">resume</a>
                 <span class="accent external link">↗︎</span>
             </div>
             <div>
@@ -53,5 +129,15 @@
             site designed & coded by me
         </div>
     </div>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+});
+</script>
 </body>
 </html>
