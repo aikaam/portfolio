@@ -11,7 +11,7 @@
 </head>
 <body>
      <div class="navi">
-                    <div class="nav-name">melina äikää</div>
+                    <div class="nav-name"><a href="index.html">melina äikää</a></div>
                     <div class="play">
                         <a href="play.html">✦ playground ✦</a>
                     </div>
@@ -21,12 +21,12 @@
                     <div class="about">
                         <a href="about.html">✦ about ✦</a>
                     </div>      
-            </div>
-            <div class="hamburger">
+                    <div class="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
-            </div>
+                    </div>
+            
                     <div class="mobile-menu" id="mobileMenu">
                         <a href="index.html">home</a>
                         <a href="play.html">playground</a>
@@ -64,13 +64,7 @@
                     <h6>The Challenge</h6>
                     <p>The main challenge was to create a design that is both visually appealing and functional, ensuring that prospective students can easily find the information they need about the Digital Design program. Additionally, we needed to ensure that the site is mobile-responsive, catering to a diverse audience with varying levels of technical proficiency. Balancing aesthetics with usability was a key focus throughout the redesign process.</p>
                 </div>
-                <!-- <div class="process">
-                    <h6>Process</h6>
-                    <p>In the beginning of the design process, we conducted a questionnaire to current students. Our aim was to find out how was the user experience with the previous page. Through the answers, we found out that most people found the existing page to be quite easy to navigate, but would have wanted more information about the studies and working after the degree. Thus, we decided to add a page for frequently asked questions to collect information together and make a video interviewing current students about their views on the degree and studies.<br><br>We analyzed the existing infosite to identify usability issues and areas for improvement. Based on these insights, we created user personas and use cases to guide our design decisions.</p>
-                    <img src="dimu.png" width="100%" height="auto">
-                    <p>After getting feedback from the client, we chose to go with a brutalist style. Bold colors and big fonts combined to old computer hardware, giving the page a fresh look.</p>
-                    <p>We then developed wireframes and interactive prototypes, focusing on a clean layout, intuitive navigation, and engaging visuals. We conducted usability testing with a sample of users to gather feedback and iterated on the design accordingly. Finally, we implemented the new design using HTML and CSS, ensuring it is mobile-responsive.</p>
-                </div> -->
+                
                 <div class="process">
                     <h6>The Process</h6>
                     <p>In the beginning of the design process, we conducted a questionnaire to current students. Our aim was to find out how the user experience was with the previous page. Through the answers, we found out that most people found the existing page easy to navigate but wanted more information about the studies and working after the degree. Thus, we added a page for frequently asked questions and a video interviewing current students about their views on the degree.
@@ -133,11 +127,13 @@
 <script>
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
+    const navi = document.querySelector('.navi');
 
     hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
+        mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        navi.classList.toggle('menu-open');
+        document.body.classList.toggle('no-scroll');
 });
 </script>
 </body>
