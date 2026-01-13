@@ -11,7 +11,7 @@
 </head>
 <body>
      <div class="navi">
-                    <div class="nav-name">melina äikää</div>
+                    <div class="nav-name"><a href="index.html">melina äikää</a></div>
                     <div class="play">
                         <a href="play.html">✦ playground ✦</a>
                     </div>
@@ -21,12 +21,12 @@
                     <div class="about">
                         <a href="about.html">✦ about ✦</a>
                     </div>      
-            </div>
-            <div class="hamburger">
+                    <div class="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
-            </div>
+                    </div>
+            
                     <div class="mobile-menu" id="mobileMenu">
                         <a href="index.html">home</a>
                         <a href="play.html">playground</a>
@@ -137,11 +137,13 @@
 <script>
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
+    const navi = document.querySelector('.navi');
 
     hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
+        mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        navi.classList.toggle('menu-open');
+        document.body.classList.toggle('no-scroll');
 });
 </script>
 </body>
